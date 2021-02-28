@@ -13,6 +13,8 @@
     * Centralised VCS
     * Distributed VCS
 3. Git (Demo)
+    * Git Project structure
+    * States of files
     * Set up remote repository
     * Demonstrate basic git commands
       * add
