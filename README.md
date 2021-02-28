@@ -6,6 +6,7 @@
 
 1. Required software installation
   * Nodejs 12 useful link for Ubuntu (https://computingforgeeks.com/how-to-install-nodejs-on-ubuntu-debian-linux-mint/);
+  * Nodejs 12 for Windows users https://nodejs.org/en/blog/release/v12.13.0/ 
   * Visual studio code `sudo snap install --classic code`
   * Git
 2. Version Control Systems (VCS) and Git [1]
@@ -22,6 +23,7 @@
       * push
       * fetch
       * merge
+      * rm
       * revert
 
 4. Javascript for Browser
