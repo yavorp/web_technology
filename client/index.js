@@ -22,8 +22,69 @@ console.log(composeFunctions(func)(2, 2))
 // console.log(demoWithHigherOrderFunction(func, 1, 2));
 
 
-// Object and constructors
+// SERVER CONTENT 
+var a = {};
+// Show js is interepret;
+if (false) {
+    A.prototype = function() {
+        console.log('sdasdsa');
+    }    
+}
 
+
+// Demonstrate adding methods to prototype of a function with and without syntax sugar
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+
+    getName() {
+        return this.name;
+    }
+}
+
+Person.prototype.introduce = function() {
+    return 'Hello my name is ' + this.name;
+};
+
+a = new Person('Yavor');
+var b = 10;
+// Execution Context Example
+function factorial(n) {
+    // b is part of Global scope
+    console.log(b);
+    if (n === 1 || n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+factorial(3);
+
+let swim = {
+    setSwimProperties(speed, direction) {
+      this.speed = speed;
+      this.direction = direction;
+    },
+   
+    getSwimProperties(){
+      console.log(`swimming ${this.speed} towards ${this.direction}`);
+    }
+}
+   
+class Reptile {
+    constructor(name) {
+      this.name = name;
+    }
+}
+   
+Object.assign(Reptile.prototype, swim);
+let alligator = new Reptile("alligator");
+alligator.setSwimProperties("5 m/s", "upstream");
+alligator.getSwimProperties();
+
+// Object and constructors
 function FirstPoint(x, y) {
     this.x = x;
     this.y = y;
@@ -113,3 +174,7 @@ let sayMixin = {
   // now User can say hi
   new User("Dude").sayHi(); // Hello Dude
 // END OF MIXIN EXAMPLE
+
+
+
+
