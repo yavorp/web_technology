@@ -2,7 +2,6 @@
 var object = { a: 10 };
 // console.log(object.a);
 // console.log(object['a']);
-
 var func = function sum(a,b) {
     return a + b;
 }
@@ -33,26 +32,42 @@ if (false) {
 
 
 // Demonstrate adding methods to prototype of a function with and without syntax sugar
-class Person {
-    constructor(name) {
-        this.name = name;
-    }
+// class Person {
+//     constructor(name) {
+//         this._privateVariable;
+//         this.name = name;
+//     }
 
-    getName() {
-        return this.name;
-    }
-}
+//     getName() {
+//         return this.name;
+//     }
 
-Person.prototype.introduce = function() {
-    return 'Hello my name is ' + this.name;
-};
+//     intorduce() {
+//       return 'Hello my name is ' + this.name;  
+//     }
+// }
 
-a = new Person('Yavor');
-var b = 10;
+// class Student extends Person {
+//   constructor(name, university) {
+//     super(name);
+//     this.university = university;
+//   }
+
+//   intorduce() {
+//     return super.intorduce() + "'I study in '" + this.university;
+//   }
+// }
+
+// // Person.prototype.introduce = function() {
+// //     return 'Hello my name is ' + this.name;
+// // };
+
+// a = new Student('Yavor', 'SU');
+// console.log(a.intorduce());
+// var b = 10;
 // Execution Context Example
 function factorial(n) {
     // b is part of Global scope
-    console.log(b);
     if (n === 1 || n === 0) {
         return 1;
     } else {
@@ -61,7 +76,7 @@ function factorial(n) {
 }
 
 factorial(3);
-
+// MIXIN EXAMPLE
 let swim = {
     setSwimProperties(speed, direction) {
       this.speed = speed;
@@ -83,14 +98,25 @@ Object.assign(Reptile.prototype, swim);
 let alligator = new Reptile("alligator");
 alligator.setSwimProperties("5 m/s", "upstream");
 alligator.getSwimProperties();
+alligator.__proto__.test = function() {
+  console.log('test');
+}
+
+let reptile = new Reptile('iguana');
+reptile.setSwimProperties("5 m/s", "upstream");
+reptile.test();
 
 // Object and constructors
 function FirstPoint(x, y) {
     this.x = x;
     this.y = y;
 }
+FirstPoint.prototype.print = function() {
+  console.log('X: ' + this.x + ', Y: ' + this.y);
+}
 
 var firstPoint = new FirstPoint(10, 10);
+firstPoint.print();
 var point = {
     x: 1,
     y: 2
@@ -99,8 +125,17 @@ var point = {
 console.log(firstPoint.__proto__ === point.__proto__);
 
 function Point3d(x, y, z) {
-    Point.apply()
+    FirstPoint.call(this, x, y);
+    this.z = z;
 }
+
+Point3d.prototype = Object.create(FirstPoint.prototype);
+Point3d.prototype.showZ = function() {
+  console.log(this.z);
+}
+
+var point3d = new Point3d(1,2,3);
+point3d.print();
 // console.log(point.__proto__);
 
 // // Prototype chain examples
