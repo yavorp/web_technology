@@ -35,7 +35,11 @@ var point = {
     y: 2
 }
 
-console.log(firstPoint.__proto__ === point.__proto__)
+console.log(firstPoint.__proto__ === point.__proto__);
+
+function Point3d(x, y, z) {
+    Point.apply()
+}
 // console.log(point.__proto__);
 
 // // Prototype chain examples
@@ -78,3 +82,34 @@ console.log(firstPoint.__proto__ === point.__proto__)
 // Point3d.prototype = Object.create(Point.prototype);
 // const d3 = new Point3d(1,2,3);
 // console.log(Point)
+
+// Mixin Example
+let sayMixin = {
+    say(phrase) {
+      console.log(phrase);
+    }
+  };
+  sayHiMixin = { // (or we could use Object.setPrototypeOf to set the prototype here)
+  
+    sayHi() {
+      // call parent method
+      super.say(`Hello ${this.name}`); // (*)
+    },
+    sayBye() {
+      super.say(`Bye ${this.name}`); // (*)
+    }
+  };
+  Object.setPrototypeOf(sayHiMixin, sayMixin);
+  
+  class User {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  
+  // copy the methods
+  Object.assign(User.prototype, sayHiMixin);
+  
+  // now User can say hi
+  new User("Dude").sayHi(); // Hello Dude
+// END OF MIXIN EXAMPLE
