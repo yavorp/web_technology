@@ -45,11 +45,12 @@
   * `boolean`
   * `undefined`
   * `null`
-  3. Object <br> An object is collection of properties and has a single prototype object. The prototype can be either object or the `null` value
-  4. Prototypes and prototype chain <br> A prototype is a <b> delegation object </b> used to implement prototype-based inheritance.
-  5. Classes and inheritance
+  * Сравняване на примитиви https://javascript.info/comparison
+  4. Object <br> An object is collection of properties and has a single prototype object. The prototype can be either object or the `null` value
+  5. Prototypes and prototype chain <br> A prototype is a <b> delegation object </b> used to implement prototype-based inheritance.
+  6. Classes and inheritance
   * Mixins (horizontal inheritance)
-  6. Execution Context
+  7. Execution Context
   * Definition -  An execution context is a specification device that is used to track the runtime evaluation of the code.
   * Global Code
   * Function Code
