@@ -1,0 +1,38 @@
+table {
+    margin-top: 15px;
+    width: 80%;
+}
+
+th, legend {
+    font-weight: bold;
+}
+
+td {
+    text-align: center;
+}
+
+tr {
+    margin-bottom: 15px;
+}
+
+header {
+    justify-self: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40vh;
+    margin: 15px 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+}
