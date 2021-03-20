@@ -7,19 +7,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style1.css">
         <script src="dom-example.js" defer></script>
     </head>
     <body>
         <main>
-
-            <!-- Sematic example of picture with caption  -->
-            <!-- <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/01/Shadow_of_Mordor_cover_art.jpg" alt="Shadow of Mordor" />
-                <figcaption>Cover art for Middle-earth: Shadow of Mordor</figcaption>
-              </figure> -->
-              <!-- <time datetime="2008-02-14 20:00">Valentines day</time>.</p> -->
             <section>
-                <header>Students table</header>
+                <header>Student's mark</header>
                 <table>
                     <thead>
                         <tr id='header-row'>
@@ -31,8 +25,10 @@
                     </thead>
                     <tbody>
                         <tbody>
-                            <tr class='student'>
-                                <td id='first-name'>Ivan</td>
+                            <tr class='student' >
+                                <td id='first-name'>
+                                    Ivan
+                                </td>
                                 <td id='last-name'>Ivanov</td>
                                 <td id='fn'>88888</td>
                                 <td id='delete'>
@@ -44,6 +40,7 @@
                 </table>
             </section>
             <section>
+                <header>Header Example</header>
                 <fieldset>
                     <legend>Add Student's Mark</legend>
                     <form class='student'>
@@ -52,9 +49,9 @@
                         <label for='last-name'>Last Name</label>    
                         <input type='text' name='last-name'/>
                         <label for='fn'>Faculty Number</label>    
-                        <input type='text' name='fn'/>
+                        <input type='text' name='fn' pattern="[1-9][0-9]{4}"/>
                         <label for='mark'>Mark</label>    
-                        <input type='number' name='mark'/>
+                        <input type='number' name='mark' pattern="[2-6]" />
                         <input id="submit" type='submit' name='add' value='Add'/>
                     </form>    
                 </fieldset>

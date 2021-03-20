@@ -32,7 +32,6 @@
 
 
 ## Упражнение 12.03.2021
-### Sematic HTML
 ### Javascript Basics
   1. JS in browser
   2. How JS is loaded in the web pages
@@ -64,3 +63,53 @@
 
 ### Самостоятелна подготвка
 * http://es6-features.org/
+
+## Упражнение 19.03.2021
+### Ecmascript 6
+1. Въпроси
+2. Масиви и `arrow functions`
+3. Обхождане на масиви
+
+### Sematic HTML
+#### Tags
+* article
+* aside>
+* details
+* figcaption
+* figure
+* footer
+* header
+* main
+* mark
+* nav
+* section
+* summary
+* time
+
+1. Защо да използваме семантични тагове?
+    * Семантичните тагове са по-четими -> програмистите по-бързо ще се ориентират в съдържанието на дадена страница
+    * Семантичните тагове имат някакъв смисъл за разлика от тага `<div>`, който се използва за групиране на html елементи. Те помагат на различните четци на страници да интерпретират по-добре съдържанието им. Използването на тези тагове прави страницата по-лесна за разбиране от хора със зрителни проблеми.
+    * Не на последно място различните "търсачки" успяват по-лесно да си направят индексите и -> сайтовете, които използват такива тагове ще бъдат по-напред при търсенето.
+    * Документите ще имат по-коснистентна структура в един проект може да срещнете следните ` <div class="header">, <div id="header">, <div class="head">`, което се използва по един и същи начин в различни страници
+
+2. Разликата между `<section>  <article>`
+    * An article is intended to be independently distributable or reusable.
+    * A section is a thematic grouping of content.
+3. `<time>` Използва се, когато искаме да закачим много точна дата до дата, която е в четим формат
+
+### Dom tree
+1. Дефиниция
+
+2. Как обхождаме елементите
+    * `document.getElementByTag(<tagname>);`
+    * `document.getElementByClassName(<className>);`
+    * `document.getElementById(<id>);`
+    * `document.querySelector(<css Selector>)`
+
+3. Добавяне на елементи
+    * `document.createElement(<tagName>)`
+    * `element.innerText` vs `element.innerHtml`
+
+### Дпълнителни материали
+https://www.w3schools.com/html/html5_semantic_elements.asp
+https://www.freecodecamp.org/news/semantic-html5-elements/

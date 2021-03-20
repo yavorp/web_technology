@@ -1,9 +1,24 @@
-const a  = { 
-    a: 10
- };
-function test() {
-    console.log(this.a)
+const PI = 3.14;
+const object = {
+    a: {
+        b: 10
+    }
 }
 
-const testWithContextOfA = test.bind(a);
-testWithContextOfA();
+const a = [];
+a.push(1, 2, 3);
+console.log(a.reduce((prev, currentArrayValue) => {
+    console.log(prev);
+    return prev + currentArrayValue;
+}, 0));
+
+a.forEach((element, index, arr) => {
+    console.log(element);
+    console.log(index);
+    console.log(arr);
+    console.log('\n');
+});
+console.log(a[3]);
+// object.a = 12;
+
+// console.log(PI);
