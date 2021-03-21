@@ -25,15 +25,14 @@
     markTd.innerText = 6;
     deleteTd.before(markTd);
 
-    // const deleteHeader = document.getElementById('delete-header');
-    // deleteHeader.before(th);
+    const deleteButton = document.getElementById('delete-button');
+    deleteButton.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        deleteTableRow(event.currentTarget);
+    });
 
-    // const td = document.createElement('td');
-    // // td.innerHTML = '6';
-    // const randomParagraph = document.createElement('p');
-    // randomParagraph.innerHTML = `<script>console.log('Get hacked')</script>`
-    // td.append(randomParagraph)
-    // td.setAttribute('id', 'mark');
-    // const deleteButton = document.getElementById('delete');
-    // deleteButton.before(td);
+    function deleteTableRow(deleteButtonElement) {
+        deleteButtonElement.parentElement.parentElement.remove();
+    }
 })();
