@@ -3,6 +3,7 @@
     const headers = document.getElementsByTagName('header');
     const students = document.getElementsByClassName('student');
     const firstName = document.getElementById('first-name');
+    console.log(document.nodeType);
     // firstName.innerText ='<strong>Ivan</strong>'; 
     // firstName.innerHTML = '<strong>Ivan</strong>';
 //  diff beteween innerHtml

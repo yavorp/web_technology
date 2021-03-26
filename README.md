@@ -109,7 +109,27 @@
 3. Добавяне на елементи
     * `document.createElement(<tagName>)`
     * `element.innerText` vs `element.innerHtml`
+    
 
 ### Дпълнителни материали
 https://www.w3schools.com/html/html5_semantic_elements.asp
 https://www.freecodecamp.org/news/semantic-html5-elements/
+
+## 26.03.2021
+Very optimistic plan :D
+1. DOM допълнение
+    * Изтриване на елементи
+        * `element.deleteElement`
+2. Събития (events)
+    * Bubling
+3. Modules in JS
+    * Common JS modules - Използват се в Nodejs основно, защото ES модулите изискват допълнителни конфигурации. Модулите се зареждат с ключовата дума `require`. Оценката на модула се случва, когато се интерпретатора срещне ключовата дума `require`. Един файл експортва функционалност чрез ключовите думи `exports` `module.exports`. Двете ключови думи за експортване. За повече информация може да разгледате
+    https://www.sitepoint.com/understanding-module-exports-exports-node-js/
+    * ECMA Script modules - Могат да се използват в брузъра и при nodejs приложения; За сега ще го използваме основно в брузърът, защото се изискват различни настройки в `package.json`.
+3. Object Methods
+4. CSS grid and flex
+
+### Самостоятелна работa
+* Asyncronous javascript
+* 
+
