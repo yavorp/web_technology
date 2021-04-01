@@ -59,6 +59,6 @@ let alligator = new Reptile("alligator");
 alligator.setSwimProperties("5 m/s", "upstream");
 alligator.getSwimProperties();
 
-const { test } = require('./module');
+const asdf= require('./module');
 
-test();
+console.log(asdf);

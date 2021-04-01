@@ -37,6 +37,11 @@
         deleteButtonElement.parentElement.parentElement.remove();
     }
 
+    const sectionElement = document.getElementById('section-example');
+    sectionElement.addEventListener('click', event => {
+        console.log(event);
+    })
+
     const submitFormButton = document.getElementById('submit')
     submitFormButton.addEventListener('click', event => {
         event.preventDefault();
