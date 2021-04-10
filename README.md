@@ -131,5 +131,64 @@ Very optimistic plan :D
 
 ### Самостоятелна работa
 * Asyncronous javascript
-* 
 
+## Упражнение 02.04.2021
+### Agenda
+1. Да се направи код ревю и обяснения по проектите
+2. Blocking vs. Non blocking
+    * Blocking is when the execution of additional JavaScript in the Node.js process must wait until a non-JavaScript operation completes. This happens because the event loop is unable to continue running JavaScript while a blocking operation is occurring.
+3. Асинхронност
+    * Много от тежките операции в nodejs(тези, които отнемат повече време) се бавят заради чакането при различни входно изходни операции.
+    * Четене и писане във файл // да добавя примери
+    * Заявки // добави примери в някое web app-че
+    * Evnet loop - Това е механизъм, който позволява на Nodejs да изпълнява non-blocking I/O операции, въпреки че Javascript е еднонишков език.
+    Това се случва поради факта, че повечето ядра на операционните системи са многонишкови, т.е. те могат да изпълняват много задачи в бакграунд режим. Когато някои от тези задачи приключи казва на Nodejs-кия процес да изпълни колбеците.
+4. Common JS modules in nodejs projects, добавяме го, защото за примерите, ще бъде нужно да се използва `fs`
+    * NPM - Package manager for nodejs.
+    * package.json - https://nodejs.dev/learn/the-package-json-guide
+5. Promise
+#### Самостоятелна работа
+Промисифайвайнете основните операции за писане и четене. 
+#### Допълнителни материали
+* Материали за package.json в node js https://nodejs.dev/learn/the-package-json-guide
+* Event loop за node js приложения https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/
+
+## Упражнение 09.04.2021
+
+1. HTTP (Hypertext Transfer Protocol) 1.1
+    * Интуитивна дефиниция - Протокол за пренасяне на хипермедийни файлове като HTML страници. Първоначалният замисъл на HTTP е да се използва за комуникация между браузъри и уебсървъри, но той се използва и за комуникация между различни сървъри и сървиси. HTTP следва моделът клиент-сървър. Клиентските прилжения отварят връзка към сървър и изпраща заявка към него. След това чака докато получи отговор или съобщение за грешка. В HTTP сървърите не се пази клиентско състояние(Stateless). HTTP прави връзка със сървър приложенията чрез or TCP/IP или TLS-encrypted TCP връзка, мрежовия протокол, което означава, че може да се счита за сигурен начин за комуникация, защото не се губят съобщения без да се хвърли някаква грешка както може да се случи с UDP протокола. 
+    * Структура 
+        * HTTP Method
+        * Header
+        * Body
+
+    * HTTP Methods (https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)
+        * GET - The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+        * HEAD - The HEAD method asks for a response identical to that of a GET request, but without the response body.
+        * POST - The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
+        * PUT - The PUT method replaces all current representations of the target resource with the request payload.
+        * DELETE - The DELETE method deletes the specified resource.
+        * PATCH - The PATCH method is used to apply partial modifications to a resource.
+    * Структура на HTTP заявка (Mozila devs)
+        * A start-line describing the requests to be implemented, or its status of whether successful or a failure. This start-line is always a single line.
+        * An optional set of HTTP headers specifying the request, or describing the body included in the message.
+        * A blank line indicating all meta-information for the request has been sent.
+        * An optional body containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
+
+2. REST API
+    * API - Понятието идва от (Application Programming Interface). Представлява нещо като сделка между отделни софтуерни компоненти, които трябва да си комуникират.
+    * REST идва от "Representational State Transfer". Като цяло представлява множество от правила и насоки, които да бъдат спазвани от програмистите при проектирането на API. За да наречем едно API REST то трябва да се подчинява на опрделени правила:
+        * Трябва да се използва HTTP като комуникационен протокол
+        * Трябва да бъде стейтлес комуникацията,т т.е. всяка заявка се разглежда без да се има предвид какви са били предните заявки
+        * Структурата на сървъра не трябва да влияе на това как клиентските приложения достъпват API-а.
+    * Съвети при изграждането
+3. Express JS
+    * Hello World example
+    * Test API
+        * Postman
+        * Fetch API
+
+### Използвани материали
+* HTTP - https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+* REST - https://www.redhat.com/en/topics/api/what-is-a-rest-api
+* Express JS - https://expressjs.com/
