@@ -38,15 +38,14 @@ app.get('/', (req, res) => {
   console.log('with invalid data');
 });
 
-app.get('/route', async (req, res) => {
-  await readFilePromise('./index.html')
-    .then(result => {
-      res.send(result);
-    })
-    .catch(error => {
-      console.error(error);
-      res.sendStatus(500);
-    });
+app.get('/html', async (req, res) => {
+  try {
+    const result = await readFilePromise('./index.html');
+    res.send(result);
+  } catch(error) {
+    console.error(error);
+    res.sendStatus(500);
+  }
 });
 
 app.use('/user', router);
