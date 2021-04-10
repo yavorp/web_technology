@@ -192,3 +192,6 @@ Very optimistic plan :D
 * HTTP - https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
 * REST - https://www.redhat.com/en/topics/api/what-is-a-rest-api
 * Express JS - https://expressjs.com/
+
+### Проблем:
+Проблемът, на който се натъкнахме на упражнението беше, че не съм използвал грешния метод за четене на файлове.
