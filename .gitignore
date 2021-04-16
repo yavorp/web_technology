@@ -2,5 +2,9 @@ task/node_modules
 server/node_modules
 server/app/node_modules
 server/app/.env
+server/ts-app/.env
+server/ts-app/node_modules
+ts/node_modules
+ts/dist
 
 client/node_modules
