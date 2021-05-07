@@ -246,3 +246,31 @@ Very optimistic plan :D
     * Classes // show demo
 2. Разширяване на функционалността на сървъра
     * Mock DB service
+
+
+## Упражнение 07.05.2021
+### ORM
+
+1. Предварителни задачи:
+    - избор и инсталиране на сървър(MongoDb, Postgres), зависи какво си изберете
+    - инсталиране на postgres за [Linux](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04) и [Windows](https://www.postgresql.org/download/)
+    - инсталиране на [mongodb](https://docs.mongodb.com/guides/server/install/)
+
+2. MongoDB 
+    - NOSQL база данни. Печелим от това, че мислим за данните в JSON формат, т.е. не мислим за релациите и последващите свързвания на данните.
+    - Документния модел на представяне на данните се мапва лесно до обекти особено в JS/TS
+    - Основните разлики между SQL и NoSQL  базите може да видите [тук](https://www.mongodb.com/nosql-explained/nosql-vs-sql)
+3. Полезни команди:
+    - show dbs
+    - show collections
+    - db.collection.find()
+    - db.collection.find({conditions}, {keys})
+    - db.collection.find({$or: [cond1, cond2, ...condN]})
+    - добави данни в колекцията
+    - изтрий нещо от колекцията
+3. Дефиниция
+Ресурс, от който да разгледате ORM: https://www.sitepoint.com/javascript-typescript-orms/
+
+Useful links for CI/CD:
+- https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+- https://dev.to/ibmdeveloper/dockers-and-dad-jokes-how-to-containerize-a-reactjs-application-5no // for react apps
