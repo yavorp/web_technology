@@ -1,6 +1,7 @@
 import express, { Router } from 'express';
 import bcrypt from 'bcrypt';
 import { User } from '../models/user';
+import jwt from 'jsonwebtoken';
 
 export const userRoute = Router();
 const SALT_ROUNDS = 10;
@@ -23,14 +24,17 @@ userRoute.post('/login', async(req, res) => {
     if (!user) {
       throw new Error('Wrong username or password');
     }
-    console.log('asdf');
     const pass = await bcrypt.compare(password, user.password!);
     if(!pass) {
       throw new Error('Wrong username or password');
     }
-    // ugly as fuck
-    (req.session as any).something = 'authenticated';
-    req.session.regenerate
+    const token = jwt.sign({
+      name: user.name,
+    }, 'secreet', {
+      expiresIn: '10h'
+    });
+    res.setHeader('Authorization', token)
+    // (req.session as any).something = 'authenticated';
     res.json({
       name: user.name,
       email: user.email,
