@@ -36,23 +36,9 @@ app.use(cors({
 //   },
 //   store
 // }));
-app.use('/user', userRoute);
+app.use('/auth', userRoute);
 
 app.use(authMiddleware);
-
-
-app.get('/', (req, res) => {
-  res.json({
-    name: 'Asdf'
-  });
-});
-
-app.post('/', (req, res) => {
-  const a: { a: number } = req.body;
-  a.a = a.a + 1;
-  // console.log(a);
-  res.json(a);
-})
 
 
 app.listen(3000, () => {

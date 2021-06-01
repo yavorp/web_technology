@@ -295,6 +295,11 @@ Very optimistic plan :D
 4. Oauth - https://www.youtube.com/watch?v=996OiexHze0
 
 
+Socketio 
+    https://www.npmjs.com/package/ngx-socket-io --angular
+    socket.io -- for express app
+
+
 Useful links for CI/CD:
 - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
 - https://dev.to/ibmdeveloper/dockers-and-dad-jokes-how-to-containerize-a-reactjs-application-5no // for react apps

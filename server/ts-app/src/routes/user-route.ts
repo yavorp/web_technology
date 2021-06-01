@@ -1,6 +1,7 @@
 import express, { Router } from 'express';
 import bcrypt from 'bcrypt';
 import { User } from '../models/user';
+import UserService from '../services/user-service';
 import jwt from 'jsonwebtoken';
 
 export const userRoute = Router();
@@ -19,7 +20,7 @@ userRoute.post('/', async (req, res) => {
 
 userRoute.post('/login', async(req, res) => {
   const { email, password} = req.body;
-  const user = await User.query().findOne({email});
+  const user = await UserService.findByEmail(email);
   try {
     if (!user) {
       throw new Error('Wrong username or password');

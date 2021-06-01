@@ -1,0 +1,17 @@
+<ng-container *ngIf="hero !== null">
+  <div style="width: 500px;">
+
+    <div>
+      <label>Hero Name:</label>
+      <input placeholder="hero name" [(ngModel)]="hero.name">
+
+    </div>
+    <div>
+      <label>Hero Power:</label>
+      <input placeholder="power" [(ngModel)]="hero.power">
+    </div>
+
+  </div>
+
+  <button>Send User</button>
+</ng-container>
